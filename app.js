@@ -28,8 +28,10 @@ bot.onText(/\/start/, (msg, user) => {
             if (her == true && her2 == 1) {
                 her2 = 0
                 const chatId = msg.chat.id;
-                bot.sendMessage(chatId, '😜');
-                bot.sendMessage(chatId, 'Пора в бой');
+                setTimeout(() => {
+                 bot.sendMessage(chatId, '😜');
+                 bot.sendMessage(chatId, 'Пора в бой');
+                }, 1000);
                 const db = getDatabase();
                 set(ref(db, 'state/' ), {state: false});
             }
