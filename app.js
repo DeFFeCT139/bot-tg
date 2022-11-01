@@ -20,11 +20,13 @@ const bot = new TelegramBot(token, { polling: true })
 
 bot.onText(/\/start/, (msg, user) => {
     setInterval(() => {
+        let her2 = 1
         const dbRef = ref(getDatabase());
         get(child(dbRef, 'state/state')).then((snapshot) => {
             let her = snapshot.val();
             console.log(her)
-            if (her == true) {
+            if (her == true && her2 == 1) {
+                her2 = 0
                 const chatId = msg.chat.id;
                 bot.sendMessage(chatId, '😜');
                 bot.sendMessage(chatId, 'Пора в бой');
