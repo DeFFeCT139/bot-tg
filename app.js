@@ -32,5 +32,5 @@ bot.onText(/\/start/, (msg, user) => {
                 set(ref(db, 'state/' ), {state: false});
             }
         })
-    }, 1000);
+    }, 2000);
 });
