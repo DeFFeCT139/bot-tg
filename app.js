@@ -14,7 +14,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-const token = 'process.env.TOKEN'
+const token = '5683411563:AAFufIzOfYqK4Gq6lWq_38k4hCJs6vyHVSc'
 
 const bot = new TelegramBot(token, { polling: true })
 
